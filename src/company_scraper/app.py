@@ -6,8 +6,15 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import pandas as pd
 import streamlit as st
 
-from . import config
-from .scraper import (
+import sys
+from pathlib import Path
+
+_src = str(Path(__file__).resolve().parent.parent)
+if _src not in sys.path:
+    sys.path.insert(0, _src)
+
+from company_scraper import config
+from company_scraper.scraper import (
     deduplicate_urls,
     scrape_company,
     reset_rate_limiter,
