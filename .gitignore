@@ -181,6 +181,9 @@ cython_debug/
 .cursorindexingignore
 
 
+# Windows Explorer metadata
+desktop.ini
+
 # Project-specific generated files
 companies_output.xlsx
 errors.log
