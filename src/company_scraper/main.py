@@ -6,8 +6,8 @@ from openpyxl.styles import Font, Alignment
 from openpyxl.utils import get_column_letter
 from tqdm import tqdm
 
-import config
-from scraper import scrape_company, deduplicate_urls
+from . import config
+from .scraper import scrape_company, deduplicate_urls
 
 logging.basicConfig(
     filename=config.ERROR_LOG_FILE,
